@@ -1,38 +1,186 @@
-.App {
+.container {
+  display: grid;
+  gap: 10px;
+  margin: 2rem 2rem;
+}
+.card {
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 1rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  position: relative;
+  max-width: 250px;
+}
+.sizediv {
+  background: rgb(192, 192, 192);
+  font-size: 2rem;
+  padding: 3rem 1rem;
+  font-weight: lighter;
+  opacity: 0.6;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sale {
+  display: none;
+}
+.card:nth-child(2) .rating::before {
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(4) .rating::before {
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(n + 7) .rating::before {
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(2) .price::before {
+  content: "$20.00";
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.card:nth-child(2) .sale {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(3) .price::before {
+  content: "$50.00";
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.card:nth-child(3) .sale {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(5) .price::before {
+  content: "$50.00";
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.card:nth-child(5) .sale {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(7) .price::before {
+  content: "$20.00";
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.card:nth-child(7) .sale {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content {
+  min-height: 9rem;
+}
+button {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  border-color: rgb(0, 0, 0);
+}
+.zeroitems :hover {
+  color: rgb(245, 236, 236);
+  background-color: rgb(7, 6, 6);
+}
+.changeitems :hover {
+  color: rgb(245, 236, 236);
+  background-color: rgb(7, 6, 6);
+}
+@media (min-width: 400px) {
+  .container {
+    margin: 2rem 6rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 500px) {
+  .container {
+    margin: 2rem 8rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 600px) {
+  .container {
+    margin: 2rem 12rem;
+  }
+}
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 4rem;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    gap: 10px;
+    margin: 2rem 6rem;
+  }
+  @media (min-width: 900px) {
+    .container {
+      gap: 10px;
+      margin: 2rem 9rem;
+    }
+  }
+  @media (min-width: 1000px) {
+    .container {
+      gap: 10px;
+      margin: 2rem 12rem;
+    }
+  }
+}
+@media (min-width: 1020px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    margin: 2rem 4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    margin: 2rem 10rem;
+  }
+}
+@media (min-width: 1800px) {
+  .container {
+    margin: 2rem 16rem;
+  }
+}
+@media (min-width: 2000px) {
+  .container {
+    margin: 2rem 22rem;
   }
 }
